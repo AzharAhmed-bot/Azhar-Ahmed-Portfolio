@@ -1,13 +1,213 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+.container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .container .square {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .container .square:nth-child(2) {
+    transform: translate(-25%, -25%) rotateX(180deg);
+    filter: hue-rotate(60deg);
+  }
+  
+  .container .square:nth-child(3) {
+    transform: translate(25%, 25%) rotate(180deg);
+    filter: hue-rotate(180deg);
+  }
+  
+  .container .square::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #0f0;
+    box-shadow: 0 0 0 8px #0f03, 0 0 0 15px #0f01;
+    animation: animateSquare 4s linear infinite;
+  }
+  
+  @keyframes animateSquare {
+    0% {
+      transform: translate(2px,2px);
+    }
+  
+    25% {
+      transform: translate(178px,2px);
+    }
+  
+    50% {
+      transform: translate(178px,178px);
+    }
+  
+    75% {
+      transform: translate(2px,178px);
+    }
+  
+    100% {
+      transform: translate(2px,2px);
+    }
+  }
+  
+  .container .square span {
+    position: absolute;
+    inset: 10px;
+    overflow: hidden;
+    transform: rotate(calc(90deg * var(--i)));
+  }
+  
+  .container .square span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #0f0;
+    transform: translateX(-100%);
+    animation: animate 4s linear infinite;
+    animation-delay: calc(1s * var(--i));
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translateX(-100%);
+    }
+  
+    50%,100% {
+      transform: translateX(100%);
+    }
+  }
+  .Navbar {
+    background-color: #333;
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    animation: fade-in 1s ease;
+  }
+  
+  .NavbarContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .Logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .MenuButton {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+  }
+  
+  .MenuButton.open {
+    transform: rotate(90deg);
+  }
+  
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+  }
+  /* Navbar container */
+.Navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* Logo */
+  .Navbar__logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  /* Navigation links */
+  .Navbar__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .Navbar__link {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .Navbar__link:hover {
+    color: purple;
+  }
+  
+  /* Active link indicator */
+  .Navbar__link.active::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: purple;
+    bottom: -5px;
+    left: 0;
+  }
+  
+  /* Responsive adjustments
+  @media screen and (max-width: 768px) {
+    .Navbar {
+      padding: 10px 20px;
+    }
+  
+    .Navbar__links {
+      flex-direction: column;
+      align-items: flex-end;
+      background-color: rgba(255, 255, 255, 0.9);
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 60%;
+      transition: right 0.3s ease-in-out;
+    }
+  
+    .Navbar__links.active {
+      right: 0;
+    }
+  
+    .Navbar__link {
+      margin: 10px;
+    }
+  
+    .Navbar__link.active::before {
+      display: none;
+    }
+  } */
+  
+  
