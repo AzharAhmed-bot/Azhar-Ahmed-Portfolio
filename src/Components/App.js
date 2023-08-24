@@ -3,6 +3,7 @@ import Navbar from "./NavBar";
 import Intro from "./Intro";
 import Image from "./image";
 import Skills from "./Skills";
+import Contacts from "./Contacts";
 import { Route,Routes } from "react-router-dom";
 function App() {
   const [isLoading, setisLoading] = useState(true);
@@ -45,6 +46,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Intro/>}/>
           <Route path="/skills" element={<Skills/>}/>
+          <Route path="/contact" element={<Contacts/>}/>
         </Routes>
             
     

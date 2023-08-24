@@ -10,6 +10,8 @@ import TailwindCss from "/home/azhar/azhar-ahmed-portfolio/src/tailwind.jpg";
 import ReactLogo from "/home/azhar/azhar-ahmed-portfolio/src/logo512.png";
 import Html from "/home/azhar/azhar-ahmed-portfolio/src/html.png";
 import Css from "/home/azhar/azhar-ahmed-portfolio/src/css.png";
+import FastAPi from "/home/azhar/azhar-ahmed-portfolio/src/FastApi.png";
+import Flask from "/home/azhar/azhar-ahmed-portfolio/src/flask.png"
 
 const languageSkills = [
     { name: "C++", image: Cpp },
@@ -20,6 +22,8 @@ const languageSkills = [
 const frameworkSkills = [
     { name: "React", image: ReactLogo },
     { name: "Tailwind CSS", image: TailwindCss },
+    {name:"FastApi" , image: FastAPi},
+    {name:"Flask " , image:Flask}
 ];
 
 const databaseSkills = [
