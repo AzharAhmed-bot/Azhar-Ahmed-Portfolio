@@ -1,22 +1,18 @@
 import React from "react";
 import SecondImage from "./SecondImage";
-export default function Skills(){
+import Expertise from "./Expertise";
 
-    return(
-
-        <div className="flex justify-center items-center h-screen">
-            <div className="text-center">
-            <SecondImage/>
-            <h1 className="font-mono text-purple-700 text-4xl text-extrabold">My Skills</h1>
-            
-            <h3 className="font-mono text-white text-2xl text-extrabold border-b-4 border-purple-800">I would Like to take you through my craftsmanship skills and the tools am familiar with</h3>
-            <h3 className="text-white">Languages and Tools</h3>
-            </div>
-        
+export default function Skills() {
+    return (
+        <div className="flex flex-col justify-center items-center min-h-screen bg-black mt-16">
+            <SecondImage />
+            <h1 className="font-mono text-purple-700 text-4xl font-extrabold mt-8">
+                My Skills
+            </h1>
+            <h3 className="font-mono text-white text-2xl font-extrabold border-b-4 border-purple-800 mt-4">
+                Exploring the Tech Landscape
+            </h3>
+            <Expertise />   
         </div>
-        
-        
-        
-        
-    )
+    );
 }
