@@ -36,7 +36,7 @@ export default function Intro() {
           {typedText}
         </h2>
         <h2 className="text-white p-3 text-3xl font-serif text-extrabold">
-          I'm a passionate Engineer who's focused on building scalable and Performant apps.
+        I am a dedicated and enthusiastic individual with a strong passion for Artificial Intelligence. My journey in this field has been marked by continuous learning, creativity, and a drive to push boundaries.
         </h2>
       </div>
     </div>
