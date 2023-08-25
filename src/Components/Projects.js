@@ -50,16 +50,16 @@ export default function Projects() {
       <div className="flex flex-wrap justify-center items-center">
         {projectData.map((project, index) => (
           <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 ">
-            <div className="border border-purple-700 p-4 rounded-lg shadow-xl bg-white hover:scale-105 shadow-purple-900 transition duration-300">
-              <h3 className="text-lg font-mono font-bold underline mt-2">{project.title}</h3>
+            <div className="border border-purple-700 p-4 rounded-lg shadow-xl bg-gray-900 hover:scale-105 shadow-purple-900 transition duration-300">
+              <h3 className="text-lg font-mono font-bold underline mt-2 text-white">{project.title}</h3>
               <img src={project.image} alt={project.title} className="w-full" />
               <p className="text-blue-500  mt-2">
                 Techs used: {project.technologies}
               </p>
-              <p className="text-black font-semibold">{project.description}</p>
+              <p className="text-white font-semibold">{project.description}</p>
               <a
                 href={project.link}
-                className="text-purple-900 block mt-2 hover:underline"
+                className="text-purple-400 block mt-2 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
