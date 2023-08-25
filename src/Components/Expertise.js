@@ -64,7 +64,7 @@ function SkillCategory({ title, skills }) {
 
 function SkillCard({ skill }) {
     return (
-        <div className="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-lg hover:scale-105 transition duration-300 m-2">
+        <div className="bg-white rounded-lg p-4 text-center shadow-xl shadow-purple-900  hover:shadow-lg hover:scale-105 transition duration-300 m-2">
             <div className="flex items-center justify-center h-24">
                 <img
                     src={skill.image}

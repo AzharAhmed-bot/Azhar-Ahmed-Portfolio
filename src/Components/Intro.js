@@ -22,12 +22,12 @@ export default function Intro() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-screen mt-10">
       <div className="text-center">
         <Image />
         <h2 className="text-purple-800">Hello, my name is</h2>
         <h1 className="font-mono text-white text-4xl text-extrabold">
-          <span className="border-b-4 border-purple-800 font-extrabold">
+          <span className="border-b-4 border-purple-800 font-extrabold ">
             Azhar
           </span>{" "}
           Ahmed Sheikh Takoy

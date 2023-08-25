@@ -20,7 +20,7 @@ export default function Contacts(){
           <a href="https://github.com/AzharAhmed-bot">
             <img className="icon rounded-lg" src={Github} alt="GitHub" />
           </a>
-          <a href="azharahmedtakoy4444@gmail.com">
+          <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDXmVjQBLPwDjsJcSpfwwPnJzbHKKdxHxgLKFGTqKCscggjfdpfHfcMKRFnGhvZjxfkggCQ">
             <img className="icon rounded-lg" src={Gmail} alt="Gmail" />
           </a>
         </div>
