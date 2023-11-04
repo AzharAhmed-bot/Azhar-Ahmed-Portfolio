@@ -3,6 +3,7 @@ import React from "react";
 // Import images
 import Cpp from "/home/azhar/azhar-ahmed-portfolio/src/cpp.png";
 import Js from "/home/azhar/azhar-ahmed-portfolio/src/javascript.png";
+import ts from "/home/azhar/azhar-ahmed-portfolio/src/ts.png"
 import Python from "/home/azhar/azhar-ahmed-portfolio/src/python.jpg";
 import Sql from "/home/azhar/azhar-ahmed-portfolio/src/sql.png";
 import SqlAlchemy from "/home/azhar/azhar-ahmed-portfolio/src/sqlalchemy.jpg";
@@ -17,6 +18,7 @@ const languageSkills = [
     { name: "C++", image: Cpp },
     { name: "JavaScript", image: Js },
     { name: "Python", image: Python },
+    {name:"TypeScript", image:ts}
 ];
 
 const frameworkSkills = [
@@ -69,10 +71,10 @@ function SkillCard({ skill }) {
                 <img
                     src={skill.image}
                     alt={skill.name}
-                    className="w-16 h-16"
+                    className="w-16 h-16 rounded-lg"
                 />
             </div>
-            <h3 className="text-white text-lg font-semibold my-4">{skill.name}</h3>
+            <h3 className="text-white text-lg font-semibold my-4 ">{skill.name}</h3>
             <div className="flex justify-center">
                 <button className="bg-purple-700 text-white px-4 py-2 rounded-md hover:bg-purple-800 transition duration-300">
                     Hover me
